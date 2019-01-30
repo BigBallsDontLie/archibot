@@ -16,12 +16,17 @@ client.on('message', message => {
     	list = []
   	}
     else if (splitted[0] === 'add') {
-    	list.push(splitted[1])
-        var listString = '\n'
-        for (i = 0; i < list.length; i++) {
-          listString += i + ". " + splitted[1] + "\n";
+        if (list.length == 10 {
+            message.reply('List iz full dood :/');
         }
-    	message.reply(listString);
+        else {
+            list.push(splitted[1])
+            var listString = '\n'
+            for (i = 0; i < list.length; i++) {
+              listString += (i+1) + ". " + list[i] + "\n";
+            }
+            message.reply(listString);
+        }
   	}
 });
 
