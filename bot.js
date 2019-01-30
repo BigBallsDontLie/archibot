@@ -15,6 +15,9 @@ client.on('message', message => {
     if (msg === 'YOU SUCK') {
     	message.reply('But you swallow');
   	}
+    if (msg === 'HELP') {
+    	message.reply('\n new: Creates new expd list \n add <name>: Adds name to expd list');
+  	}
     if (msg === 'I LOVE YOU') {
     	message.reply('And I love you <3');
   	}
