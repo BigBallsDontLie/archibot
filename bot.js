@@ -25,7 +25,7 @@ client.on('message', message => {
             message.reply(listString);
         }
         else {
-    	    message.reply('List is full :'[');
+    	    message.reply('List is full =[');
         }
   	}
 });
