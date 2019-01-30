@@ -16,7 +16,7 @@ client.on('message', message => {
     	message.reply('But you swallow');
   	}
     if (msg === 'HELP') {
-    	message.reply('\n Sup my friend, here are the list of commands to use: \n new \n add <name>');
+    	message.reply('\n Sup :3 here are the list of commands: \n -new \n -add <name>');
   	}
     if (msg === 'I LOVE YOU') {
     	message.reply('And I love you <3');
