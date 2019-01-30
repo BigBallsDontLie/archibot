@@ -17,9 +17,9 @@ client.on('message', message => {
   	}
     else if (splitted[0] === 'add') {
     	list.push(splitted[1])
-        var listString = ''
+        var listString = '\n'
         for (i = 0; i < list.length; i++) {
-          listString += i + ". " + splitted[1] + "<br>";
+          listString += i + ". " + splitted[1] + "\n";
         }
     	message.reply(listString);
   	}
