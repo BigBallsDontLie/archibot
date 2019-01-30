@@ -1,0 +1,2 @@
+# archibot
+Bot for discord
