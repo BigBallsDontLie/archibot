@@ -16,13 +16,17 @@ client.on('message', message => {
     	list = []
   	}
     else if (splitted[0] === 'add') {
+        if (list.length < 10 {
             list.push(splitted[1])
             var listString = '\n'
             for (i = 0; i < list.length; i++) {
               listString += (i+1) + ". " + list[i] + "\n";
             }
             message.reply(listString);
-        message.reply(list.length);
+        }
+        else {
+    	    message.reply('List is full :'[');
+        }
   	}
 });
 
