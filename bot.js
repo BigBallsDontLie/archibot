@@ -8,7 +8,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    var msg = message.toUpperCase()
+    var msg = message.content.toUpperCase()
     if (msg === 'GOOD MORNING') {
     	message.reply('Good morning sunshine <3');
   	}
