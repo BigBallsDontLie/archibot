@@ -22,6 +22,7 @@ client.on('message', message => {
               listString += (i+1) + ". " + list[i] + "\n";
             }
             message.reply(listString);
+        message.reply(list.length);
   	}
 });
 
