@@ -16,7 +16,7 @@ client.on('message', message => {
     	list = []
   	}
     else if (splitted[0] === 'add') {
-        if (list.length == 10 {
+        if (list.length === 10 {
             message.reply('List iz full dood :/');
         }
         else {
