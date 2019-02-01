@@ -26,17 +26,28 @@ client.on('message', message => {
     else if (splitted[0].toUpperCase() === 'ADD') {
         if (list.length < 10) {
             list.push(splitted[1])
-            var listString = '\n'
-            for (i = 0; i < list.length; i++) {
-              listString += (i+1) + ". " + list[i] + "\n";
-            }
-            message.reply(listString);
+            showList()
         }
         else {
     	    message.reply('List is full =[');
         }
   	}
+    else if (splitted[0].toUpperCase() === 'REMOVE') {
+        var index = list.indexOf(splitted[1])
+        if (index != -1) {
+            list.splice(index, 1)
+            showList()
+        }
+  	}
 });
+
+function showList() {
+    var listString = '\n'
+    for (i = 0; i < list.length; i++) {
+      listString += (i+1) + ". " + list[i] + "\n";
+    }
+    message.reply(listString);
+}
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
