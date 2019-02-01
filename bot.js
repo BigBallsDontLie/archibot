@@ -18,6 +18,9 @@ client.on('message', message => {
     if (msg === 'I LOVE YOU') {
     	message.reply('And I love you <3');
   	}
+    if (msg === 'WHAT IS LOVE?') {
+    	message.reply('BABY DONT HURT ME </3');
+  	}
     var splitted = message.content.split(/ (.+)/);
     if (splitted[0].toUpperCase() === 'NEW') {
     	list = []
