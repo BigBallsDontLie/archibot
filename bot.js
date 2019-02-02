@@ -58,12 +58,7 @@ client.on('message', message => {
         }
   	}
     else if (splitted[0].toUpperCase() === 'HELP') {
-        message.reply('
-                      \n ---Commands--- 
-                      \n new                        (start a new expd list) 
-                      \n add <name>                 (adds <name> to list) 
-                      \n remove <name>              (removes <name> from list. must be exact) 
-                      \n show                       (shows current list)');
+        message.reply('\n ---Commands---\n new                        (start a new expd list) \n add <name>                 (adds <name> to list) \n remove <name>              (removes <name> from list. must be exact) \n show                       (shows current list)');
   	}
 });
 
