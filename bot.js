@@ -21,6 +21,13 @@ client.on('message', message => {
     if (msg === 'WHAT IS LOVE?') {
     	message.reply('BABY DONT HURT ME </3');
   	}
+    if (msg === 'SHOW') {
+    	var listString = '\n'
+            for (i = 0; i < list.length; i++) {
+              listString += (i+1) + ". " + list[i] + "\n";
+            }
+            message.reply(listString);
+  	}
     var splitted = message.content.split(/ (.+)/);
     if (splitted[0].toUpperCase() === 'NEW') {
     	list = []
@@ -49,6 +56,9 @@ client.on('message', message => {
             }
             message.reply(listString);
         }
+  	}
+    else if (splitted[0].toUpperCase() === 'HELP') {
+        message.reply('\n ---Commands--- \n new (start a new expd list) \n add <name> (adds <name> to list) \n remove <name> (removes <name> from list. must be exact) \n show (shows current list)');
   	}
 });
 
