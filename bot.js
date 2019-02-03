@@ -23,7 +23,7 @@ client.on('message', message => {
         else {
     	    message.reply('Uhm.. I only see you as an friend. Sorry.');
         }
-        count++;
+        count = Math.random(10)
   	}
     if (msg === 'WHAT IS LOVE?') {
     	message.reply('BABY DONT HURT ME </3');
@@ -80,7 +80,7 @@ client.on('message', message => {
         else {
             message.reply('*plan backfired,' + splitted[1] + ' whipped you like a bitch*');
         }
-        count++;
+        count = Math.random(10)
   	}
 });
 
