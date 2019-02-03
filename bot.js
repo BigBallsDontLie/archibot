@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 var list = []
+var count = 0
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -16,10 +17,22 @@ client.on('message', message => {
     	message.reply('But you swallow');
   	}
     if (msg === 'I LOVE YOU') {
-    	message.reply('And I love you <3');
+        if (count % 2 == 0) {
+    	    message.reply('And I love you <3');
+        }
+        else {
+    	    message.reply('Uhm.. I only see you as an friend. Sorry.');
+        }
+        count++;
   	}
     if (msg === 'WHAT IS LOVE?') {
     	message.reply('BABY DONT HURT ME </3');
+  	}
+    if (msg === 'I WANNA KNOW WHAT LOVE IS') {
+    	message.reply('I WANT YOU TO SHOW ME <3');
+  	}
+    if (msg === 'CUT MY LIFE INTO PIECES') {
+    	message.reply('DIS IS MA LAST RESORT');
   	}
     if (msg === 'SHOW') {
     	var listString = '\n'
@@ -59,6 +72,14 @@ client.on('message', message => {
   	}
     else if (splitted[0].toUpperCase() === 'HELP') {
         message.reply('\n ---Commands---\n new                        (start a new expd list) \n add <name>                 (adds <name> to list) \n remove <name>              (removes <name> from list. must be exact) \n show                       (shows current list)');
+  	}
+    else if (splitted[0].toUpperCase() === 'WHIP') {
+        if (count % 2 == 0) {
+    	    message.reply('*' + splitted[1] + ' was whipped recklessly*');
+        }
+        else {
+            message.reply('*plan backfired,' + splitted[1] + ' whipped you like a bitch*');
+        }
   	}
 });
 
