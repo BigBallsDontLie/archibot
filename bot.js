@@ -80,6 +80,7 @@ client.on('message', message => {
         else {
             message.reply('*plan backfired,' + splitted[1] + ' whipped you like a bitch*');
         }
+        count++;
   	}
 });
 
