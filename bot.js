@@ -15,7 +15,7 @@ client.on('message', message => {
     	message.reply('Good morning sunshine <3');
   	}
     if (msg === 'YOU SUCK') {
-    	message.reply('But you swallow' + Math.random());
+    	message.reply('But you swallow');
   	}
     if (msg === 'I LOVE YOU') {
         if (rand < 0.6) {
