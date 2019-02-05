@@ -21,6 +21,9 @@ client.on('message', message => {
         if (rand < 0.6) {
     	    message.reply('And I love you <3');
         }
+        else if (rand < 0.8) {
+    	    message.reply('*looks away*');
+        }
         else {
     	    message.reply('Uhm.. I only see you as an friend. Sorry.');
         }
@@ -83,8 +86,11 @@ client.on('message', message => {
         message.reply('\n ---Commands--- \n new <message>              (start a new expd list) \n add <name>                 (adds <name> to list) \n remove <name>              (removes <name> from list. must be exact) \n show                       (shows current list)');
   	}
     else if (splitted[0].toUpperCase() === 'WHIP') {
-        if (rand < 0.4) {
+        if (rand < 0.3) {
     	    message.reply('*' + splitted[1] + ' was whipped recklessly*');
+        }
+        else if (rand < 0.4) {
+    	    message.reply('*you put whipcream all over ' + splitted[1] + 's naked body <3');
         }
         else {
             message.reply('*plan backfired, ' + splitted[1] + ' whipped you like a bitch*');
