@@ -80,7 +80,7 @@ client.on('message', message => {
     	    message.reply('*' + splitted[1] + ' was whipped recklessly*');
         }
         else {
-            message.reply('*plan backfired,' + splitted[1] + ' whipped you like a bitch*');
+            message.reply('*plan backfired, ' + splitted[1] + ' whipped you like a bitch*');
         }
         rand = Math.random()
   	}
