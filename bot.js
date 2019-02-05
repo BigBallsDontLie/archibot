@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 var list = []
+var expdMessage = ""
 var count = 0
 
 client.on('ready', () => {
@@ -14,7 +15,7 @@ client.on('message', message => {
     	message.reply('Good morning sunshine <3');
   	}
     if (msg === 'YOU SUCK') {
-    	message.reply('But you swallow');
+    	message.reply('But you swallow' + Math.random(10));
   	}
     if (msg === 'I LOVE YOU') {
         if (count % 2 == 0) {
@@ -43,13 +44,14 @@ client.on('message', message => {
   	}
     var splitted = message.content.split(/ (.+)/);
     if (splitted[0].toUpperCase() === 'NEW') {
+        expdMessage = splitted[1]
     	list = []
         message.reply('Time for a new expedition, woop woop :D');
   	}
     else if (splitted[0].toUpperCase() === 'ADD') {
         if (list.length < 10) {
             list.push(splitted[1])
-            var listString = '\n'
+            var listString = '\n' + expdMessage + '\n'
             for (i = 0; i < list.length; i++) {
               listString += (i+1) + ". " + list[i] + "\n";
             }
