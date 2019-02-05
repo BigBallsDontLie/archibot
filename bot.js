@@ -29,11 +29,18 @@ client.on('message', message => {
     if (msg === 'WHAT IS LOVE?') {
     	message.reply('BABY DONT HURT ME </3');
   	}
+    if (msg === 'DONT HURT ME') {
+    	message.reply('NO MORE </3');
+  	}
     if (msg === 'I WANNA KNOW WHAT LOVE IS') {
     	message.reply('I WANT YOU TO SHOW ME <3');
   	}
     if (msg === 'CUT MY LIFE INTO PIECES') {
     	message.reply('DIS IS MA LAST RESORT');
+  	}
+    if (msg === 'SUFFOCATION') {
+    	message.reply('NO BREATHIN');
+    	message.reply('DUN GIVE A FOOK IF I CUT ME ARM BLEEDIN');
   	}
     if (msg === 'SHOW') {
     	var listString = '\n'
