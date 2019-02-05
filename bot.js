@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 var list = []
 var expdMessage = ""
-var count = 0
+var rand = 0
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -15,16 +15,16 @@ client.on('message', message => {
     	message.reply('Good morning sunshine <3');
   	}
     if (msg === 'YOU SUCK') {
-    	message.reply('But you swallow' + Math.random(10));
+    	message.reply('But you swallow' + Math.random());
   	}
     if (msg === 'I LOVE YOU') {
-        if (count % 2 == 0) {
+        if (rand < 0.6) {
     	    message.reply('And I love you <3');
         }
         else {
     	    message.reply('Uhm.. I only see you as an friend. Sorry.');
         }
-        count = Math.random(10)
+        rand = Math.random()
   	}
     if (msg === 'WHAT IS LOVE?') {
     	message.reply('BABY DONT HURT ME </3');
@@ -76,13 +76,13 @@ client.on('message', message => {
         message.reply('\n ---Commands--- \n new <message>              (start a new expd list) \n add <name>                 (adds <name> to list) \n remove <name>              (removes <name> from list. must be exact) \n show                       (shows current list)');
   	}
     else if (splitted[0].toUpperCase() === 'WHIP') {
-        if (count % 2 == 0) {
+        if (rand < 0.4) {
     	    message.reply('*' + splitted[1] + ' was whipped recklessly*');
         }
         else {
             message.reply('*plan backfired,' + splitted[1] + ' whipped you like a bitch*');
         }
-        count = Math.random(10)
+        rand = Math.random()
   	}
 });
 
