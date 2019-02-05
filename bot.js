@@ -90,7 +90,7 @@ client.on('message', message => {
     	    message.reply('*' + splitted[1] + ' was whipped recklessly*');
         }
         else if (rand < 0.4) {
-    	    message.reply('*you put whipcream all over ' + splitted[1] + 's naked body <3');
+    	    message.reply('*you put whipcream all over ' + splitted[1] + 's naked body <3*');
         }
         else {
             message.reply('*plan backfired, ' + splitted[1] + ' whipped you like a bitch*');
