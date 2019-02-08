@@ -4,7 +4,6 @@ const client = new Discord.Client();
 var list = []
 var expdMessage = ""
 var rand = 0
-var count = 0
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -42,16 +41,6 @@ client.on('message', message => {
     if (msg === 'CUT MY LIFE INTO PIECES') {
     	message.reply('DIS IS MA LAST RESORT');
   	}
-    if (msg === 'OH GREAT LORD ARCHI, SHOULD I YOLO THIS WEAPON?') {
-        if (count % 3 != 2) {
-            message.reply('No my child');
-        }
-        else {
-            message.reply('YOLO IS NEVA DA WAY');
-        }
-    	
-        count++;
-  	}
     if (msg === 'SUFFOCATION') {
     	message.reply('NO BREATHIN');
     	message.reply('DUN GIVE A FOOK IF I CUT ME ARM BLEEDIN');
@@ -64,6 +53,33 @@ client.on('message', message => {
             message.reply(listString);
   	}
     var splitted = message.content.split(/ (.+)/);
+    if (splitted[0].toUpperCase() === 'OH') {
+        var splitted2 = message.content.split(/ (.+)/);
+        if (splitted2[0].toUpperCase() === 'GREAT') {
+            var splitted3 = message.content.split(/ (.+)/);
+            if (splitted3[0].toUpperCase() === 'LORD') {
+                var splitted4 = message.content.split(/ (.+)/);
+                if (splitted4[0].toUpperCase() === 'ARCHI,') {
+                    var rande = Math.random()
+                    if (rande < 0.2) {
+                        message.reply('No my child');
+                    }
+                    else if (rande < 0.4) {
+                        message.reply('Maybe');
+                    }
+                    else if (rande < 0.6) {
+                        message.reply('FOOK YES BABY LETS GOOOOO <3 <3 <3');
+                    }
+                    else if (rande < 0.8) {
+                        message.reply('Do it');
+                    }
+                    else {
+                        message.reply('No wth, r u stoopid?');
+                    }
+                }
+            }
+        }
+  	}
     if (splitted[0].toUpperCase() === 'NEW') {
         expdMessage = splitted[1]
     	list = []
