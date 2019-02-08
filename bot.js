@@ -52,13 +52,15 @@ client.on('message', message => {
             }
             message.reply(listString);
   	}
+    
+    
     var splitted = message.content.split(/ (.+)/);
     if (splitted[0].toUpperCase() === 'OH') {
-        var splitted2 = message.content.split(/ (.+)/);
+        var splitted2 = splitted[1].split(/ (.+)/);
         if (splitted2[0].toUpperCase() === 'GREAT') {
-            var splitted3 = message.content.split(/ (.+)/);
+            var splitted3 = splitted2[1].split(/ (.+)/);
             if (splitted3[0].toUpperCase() === 'LORD') {
-                var splitted4 = message.content.split(/ (.+)/);
+                var splitted4 = splitted3[1].split(/ (.+)/);
                 if (splitted4[0].toUpperCase() === 'ARCHI,') {
                     var rande = Math.random()
                     if (rande < 0.2) {
