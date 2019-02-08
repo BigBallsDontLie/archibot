@@ -52,16 +52,11 @@ client.on('message', message => {
             }
             message.reply(listString);
   	}
-    
-    
-    var splitted = message.content.split(/ (.+)/);
-    if (splitted[0].toUpperCase() === 'OH') {
-        var splitted2 = splitted[1].split(/ (.+)/);
-        if (splitted2[0].toUpperCase() === 'GREAT') {
-            var splitted3 = splitted2[1].split(/ (.+)/);
-            if (splitted3[0].toUpperCase() === 'LORD') {
-                var splitted4 = splitted3[1].split(/ (.+)/);
-                if (splitted4[0].toUpperCase() === 'ARCHI,') {
+    var multiSplit = message.content.split(" ", 5);
+    if (multiSplit[0].toUpperCase() === 'OH') {
+        if (multiSplit[1].toUpperCase() === 'GREAT') {
+            if (multiSplit[2].toUpperCase() === 'LORD') {
+                if (multiSplit[3].toUpperCase() === 'ARCHI,') {
                     var rande = Math.random()
                     if (rande < 0.2) {
                         message.reply('No my child');
@@ -81,7 +76,9 @@ client.on('message', message => {
                 }
             }
         }
-  	}
+    }
+    
+    var splitted = message.content.split(/ (.+)/);
     if (splitted[0].toUpperCase() === 'NEW') {
         expdMessage = splitted[1]
     	list = []
