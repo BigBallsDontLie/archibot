@@ -65,10 +65,10 @@ client.on('message', message => {
                         message.reply('Maybe');
                     }
                     else if (rande < 0.6) {
-                        message.reply('FOOK YES BABY LETS GOOOOO <3 <3 <3');
+                        message.reply('FOOK YES BABY 10000% <3 <3 <3');
                     }
                     else if (rande < 0.8) {
-                        message.reply('Do it');
+                        message.reply('Does priests like young boys?');
                     }
                     else {
                         message.reply('No wth, r u stoopid?');
