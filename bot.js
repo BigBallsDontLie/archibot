@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 var list = []
-var expdMessage = "~~~EXPD LIST~~~"
+var expdMessage = "~EXPD LIST~"
 var rand = 0
 
 client.on('ready', () => {
