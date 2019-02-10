@@ -77,6 +77,24 @@ client.on('message', message => {
             }
         }
     }
+    if (multiSplit[0].toUpperCase() === 'LET') {
+        if (multiSplit[1].toUpperCase() === 'ME') {
+            if (multiSplit[2].toUpperCase() === 'TELEPORT') {
+                if (multiSplit[3].toUpperCase() === 'TO') {
+                    var rande = Math.random()
+                    if (rande < 0.3) {
+                        message.reply('*teleported to ' + multiSplit[3] + '!!* Woop woop :D');
+                    }
+                    else if (rande < 0.6) {
+                        message.reply('*teleport machine exploded* Whoops');
+                    }
+                    else {
+                        message.reply('Access Denied');
+                    }
+                }
+            }
+        }
+    }
     
     var splitted = message.content.split(/ (.+)/);
     if (splitted[0].toUpperCase() === 'NEW') {
