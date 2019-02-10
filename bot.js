@@ -83,10 +83,10 @@ client.on('message', message => {
                 if (multiSplit[3].toUpperCase() === 'TO') {
                     var rande = Math.random()
                     if (rande < 0.3) {
-                        message.reply('*teleported to ' + multiSplit[4] + '!!* Woop woop :D');
+                        message.reply('*teleported to ' + multiSplit[4] + '!! Woop woop :D*');
                     }
                     else if (rande < 0.6) {
-                        message.reply('*teleport machine exploded* Whoops');
+                        message.reply('*teleport machine exploded, whoops*');
                     }
                     else {
                         message.reply('Access Denied');
