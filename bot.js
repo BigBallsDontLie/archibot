@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 var list = []
-var expdMessage = ""
+var expdMessage = "~~~EXPD LIST~~~"
 var rand = 0
 
 client.on('ready', () => {
@@ -98,7 +98,9 @@ client.on('message', message => {
     
     var splitted = message.content.split(/ (.+)/);
     if (splitted[0].toUpperCase() === 'NEW') {
-        expdMessage = splitted[1]
+        if (splitted.length > 1) {
+            expdMessage = splitted[1]
+        }
     	list = []
         message.reply('Time for a new expedition, woop woop :D');
   	}
