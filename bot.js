@@ -57,11 +57,7 @@ client.on('message', message => {
         if (multiSplit[1].toUpperCase() === 'GREAT') {
             if (multiSplit[2].toUpperCase() === 'LORD') {
                 if (multiSplit[3].toUpperCase() === 'ARCHI,') {
-                    var oneMoreSplit = multiSplit[4].split(" ", 3);
-                    if (oneMoreSplit[0].toUpperCase() === 'IS' && oneMoreSplit[1].toUpperCase() === 'ARCHI') {
-                        message.reply('FOOK YES BABY 10000% <3 <3 <3');
-                    }
-                    else {
+                    
                         var rande = Math.random()
                         if (rande < 0.2) {
                             message.reply('No my child');
@@ -78,7 +74,6 @@ client.on('message', message => {
                         else {
                             message.reply('No wth, r u stoopid?');
                         }
-                    }
                 }
             }
         }
