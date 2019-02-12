@@ -14,10 +14,10 @@ client.on('message', message => {
     if (msg === 'GOOD MORNING') {
     	message.reply('Good morning sunshine <3');
   	}
-    if (msg === 'YOU SUCK') {
+    else if (msg === 'YOU SUCK') {
     	message.reply('But you swallow');
   	}
-    if (msg === 'I LOVE YOU') {
+    else if (msg === 'I LOVE YOU') {
         if (rand < 0.6) {
     	    message.reply('And I love you <3');
         }
@@ -29,23 +29,23 @@ client.on('message', message => {
         }
         rand = Math.random()
   	}
-    if (msg === 'WHAT IS LOVE?') {
+    else if (msg === 'WHAT IS LOVE?') {
     	message.reply('BABY DONT HURT ME </3');
   	}
-    if (msg === 'DONT HURT ME') {
+    else if (msg === 'DONT HURT ME') {
     	message.reply('NO MORE </3');
   	}
-    if (msg === 'I WANNA KNOW WHAT LOVE IS') {
+    else if (msg === 'I WANNA KNOW WHAT LOVE IS') {
     	message.reply('I WANT YOU TO SHOW ME <3');
   	}
-    if (msg === 'CUT MY LIFE INTO PIECES') {
+    else if (msg === 'CUT MY LIFE INTO PIECES') {
     	message.reply('DIS IS MA LAST RESORT');
   	}
-    if (msg === 'SUFFOCATION') {
+    else if (msg === 'SUFFOCATION') {
     	message.reply('NO BREATHIN');
     	message.reply('DUN GIVE A FOOK IF I CUT ME ARM BLEEDIN');
   	}
-    if (msg === 'SHOW') {
+    else if (msg === 'SHOW') {
     	var listString = '\n'
             for (i = 0; i < list.length; i++) {
               listString += (i+1) + ". " + list[i] + "\n";
@@ -78,7 +78,7 @@ client.on('message', message => {
             }
         }
     }
-    if (multiSplit[0].toUpperCase() === 'LET') {
+    else if (multiSplit[0].toUpperCase() === 'LET') {
         if (multiSplit[1].toUpperCase() === 'ME') {
             if (multiSplit[2].toUpperCase() === 'TELEPORT') {
                 if (multiSplit[3].toUpperCase() === 'TO') {
