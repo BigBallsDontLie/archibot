@@ -52,7 +52,7 @@ client.on('message', message => {
             }
             message.reply(listString);
   	}
-    var multiSplit = message.content.split(" ", 5);
+    var multiSplit = message.content.split(" ", 4);
     if (multiSplit[0].toUpperCase() === 'OH') {
         if (multiSplit[1].toUpperCase() === 'GREAT') {
             if (multiSplit[2].toUpperCase() === 'LORD') {
@@ -86,11 +86,11 @@ client.on('message', message => {
                     if (rande < 0.3) {
                         message.reply('*teleported to ' + multiSplit[4] + '!! Woop woop :D*');
                     }
-                    else if (rande < 0.6) {
+                    else if (rande < 0.7) {
                         message.reply('*teleport machine exploded, whoops*');
                     }
                     else {
-                        message.reply('Access Denied');
+                        message.reply('*tried to teleported to ' + multiSplit[4] + ', but was recklessly whipped by Jesus for tryin to defying the laws of physics*');
                     }
                 }
             }
