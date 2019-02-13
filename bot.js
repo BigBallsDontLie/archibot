@@ -52,7 +52,7 @@ client.on('message', message => {
             }
             message.reply(listString);
   	}
-    var multiSplit = message.content.split(" ", 4);
+    var multiSplit = message.content.split(" ", 5);
     if (multiSplit[0].toUpperCase() === 'OH') {
         if (multiSplit[1].toUpperCase() === 'GREAT') {
             if (multiSplit[2].toUpperCase() === 'LORD') {
