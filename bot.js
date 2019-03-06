@@ -134,13 +134,13 @@ client.on('message', message => {
   	}
     else if (splitted[0].toUpperCase() === 'WHIP') {
         if (rand < 0.3) {
-    	    message.reply('*' + splitted[1] + ' was whipped recklessly*');
+    	    message.reply('*' + splitted[1] + ' was whippeddy whapped like hot cake*');
         }
         else if (rand < 0.4) {
     	    message.reply('*you put whipcream all over ' + splitted[1] + 's naked body <3*');
         }
         else {
-            message.reply('*plan backfired, ' + splitted[1] + ' whipped you like a bitch*');
+            message.reply('*plan backfired, ' + splitted[1] + ' blocked your whip like a pro*');
         }
         rand = Math.random()
   	}
